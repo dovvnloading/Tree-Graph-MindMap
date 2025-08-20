@@ -1,48 +1,51 @@
+Of course. Here is a more professional version of the README without emojis and with a more direct tone.
+
+---
 
 # Tree-Graph-MindMap: AI-Powered Mind Map Generator
 
-Instantly turn your raw notes, brainstorming sessions, or any unstructured text into a beautiful, interactive mind map. This application leverages the power of local Large Language Models (LLMs) via [Ollama](https://ollama.com/) to intelligently structure your information, which is then visualized from a simple Markdown file.
+This application transforms raw, unstructured text into an interactive mind map. It uses local Large Language Models (LLMs) via [Ollama](https://ollama.com/) to intelligently structure information, which is then visualized from a simple Markdown file.
 
-![Untitled video - Made with Clipchamp (1)](https://github.com/user-attachments/assets/495280f0-3c15-476b-8912-8187dcaba1e2)
+![Untitled video - Made with Clipchamp (1)](https://github.com/user-attachments/assets/17718da0-b5ef-4b2c-a0f6-99d7eb9b5cff)
 
 
-## ✨ Features
+## Features
 
--   **🤖 AI-Powered Structuring**: Paste any text, click "Enhance with AI", and watch as a local LLM transforms it into a perfectly hierarchical Markdown structure, ready for visualization.
--   **✍️ Markdown-Driven**: The mind map is a direct representation of a simple Markdown file. Edit the text using standard heading syntax (`#`, `##`, etc.), and the map updates in real-time.
--   **🎨 Interactive Canvas**:
-    -   **Pan & Zoom**: Navigate your mind map with ease (Drag to pan, Ctrl+Scroll to zoom).
-    -   **Movable Nodes**: Drag and drop nodes to customize the layout. Connections automatically adjust.
-    -   **Collapsible Branches**: Click the `+/-` icon on a node to hide or show its children, allowing you to focus on specific parts of the map.
-    -   **Node Coloring**: Double-click any node to open a color picker and change its color.
--   **↔️ Editor-Canvas Sync**: Click a node in the mind map, and the corresponding line is instantly highlighted in the Markdown editor.
--   **🔍 Quick Search**: Find any node in your map with the built-in search bar.
--   **🖼️ Export to PNG**: Save your finished mind map as a high-resolution, transparent PNG image.
--   ** sleek Dark UI**: A modern, dark-themed interface built with PySide6, featuring a custom frameless window.
+-   **AI-Powered Structuring**: Uses a local LLM via Ollama to transform unstructured text into a hierarchical Markdown document suitable for visualization.
+-   **Markdown-Driven**: The mind map is generated directly from a Markdown file. The visualization updates in near real-time as you edit the text.
+-   **Interactive Canvas**:
+    -   **Pan and Zoom**: Navigate the map by dragging the canvas and using Ctrl+Scroll to zoom.
+    -   **Movable Nodes**: Freely reposition nodes; connectors will update automatically.
+    -   **Collapsible Branches**: Collapse and expand branches of the mind map to focus on specific areas.
+    -   **Node Coloring**: Customize node colors via a color picker on double-click.
+-   **Editor-Canvas Synchronization**: Selecting a node on the canvas highlights the corresponding line in the Markdown editor.
+-   **Node Search**: A search bar allows for quick filtering and finding of nodes.
+-   **PNG Export**: Export the entire mind map as a high-resolution, transparent PNG image.
+-   **Modern UI**: A custom, frameless dark-themed interface built with PySide6.
 
-## ⚙️ How It Works
+## How It Works
 
-The application is built around a simple but powerful concept:
+The application operates on three core principles:
 
-1.  **Markdown as the Source of Truth**: The structure of your mind map is defined by Markdown headings. A level 1 heading (`# Title`) becomes the root node, a level 2 heading (`## Sub-Topic`) becomes a child of the root, and so on.
-2.  **AI for Intelligence**: The "Enhance with AI" feature sends your raw text to a locally running Ollama model. A specialized system prompt instructs the model to act as an information architect, identifying themes and hierarchies and outputting a clean Markdown structure.
-3.  **Real-time Visualization**: The application parses the Markdown text and dynamically renders it as a graph of connected nodes on the canvas. A debounce timer ensures the map updates automatically as you type without overwhelming the system.
+1.  **Markdown as the Data Source**: The mind map's structure is defined by Markdown headings. A level 1 heading (`# Title`) is the root node, a level 2 heading (`## Sub-Topic`) is a child of the root, and deeper headings create subsequent branches.
+2.  **AI for Structuring**: The "Enhance with AI" feature sends the input text to a locally running Ollama model. A system prompt directs the model to analyze the text, identify its underlying structure, and return a well-formed Markdown document.
+3.  **Dynamic Rendering**: The application parses the Markdown in the editor and renders it as an interactive graph. A debounce timer automatically updates the visualization as the user types, ensuring a responsive experience.
 
-##  prerequisites
+## Prerequisites
 
-Before you begin, ensure you have the following installed and running:
+To run this application, you will need:
 
 1.  **Python 3.8+**
-2.  **PySide6** and **Ollama** Python libraries.
-3.  **[Ollama](https://ollama.com/)**: You must have the Ollama service installed and **running on your machine**. This application communicates with your local Ollama instance.
-4.  **An Ollama Model**: You need to have a model pulled to use the AI features. The application defaults to `phi3`, but you can edit the source code to use any model you prefer.
+2.  The `PySide6` and `ollama` Python libraries.
+3.  **[Ollama](https://ollama.com/)**: The Ollama service must be installed and running locally.
+4.  **An Ollama Model**: At least one model must be pulled for the AI features to work. The application defaults to `phi4:14b`, but this can be changed in the source code.
 
     ```bash
     # Pull the recommended model
-    ollama pull phi4
+    ollama pull phi4:14b
     ```
 
-## 🚀 Installation & Usage
+## Installation and Usage
 
 1.  **Clone the repository:**
     ```bash
@@ -50,12 +53,12 @@ Before you begin, ensure you have the following installed and running:
     cd Tree-Graph-MindMap
     ```
 
-2.  **Install the required Python packages:**
+2.  **Install dependencies:**
     ```bash
     pip install PySide6 ollama
     ```
 
-3.  **Ensure the Ollama service is running.** You can typically start it by running `ollama serve` in a separate terminal or by launching the Ollama desktop application.
+3.  **Start the Ollama service.** This can be done by running `ollama serve` in a terminal or by launching the Ollama desktop application.
 
 4.  **Run the application:**
     ```bash
@@ -63,17 +66,17 @@ Before you begin, ensure you have the following installed and running:
     ```
     *(Note: You may need to use `python3` depending on your system's configuration.)*
 
-## 🧠 Using the AI Enhancement
+## Using the AI Enhancement
 
-This is the standout feature of the application.
+The AI enhancement feature restructures raw text into a hierarchical format.
 
-1.  Paste any block of unstructured text into the Markdown editor. For example:
+1.  Paste unstructured text into the Markdown editor panel. For example:
 
-    > *Our company project, Phoenix, is running behind. The UI/UX team is blocked because the backend APIs are not ready. Specifically, the authentication endpoint is down, and the user profile service is returning 500 errors. On the frontend side, the component library needs to be updated to version 3.1, which is a breaking change.*
+    > Our company project, Phoenix, is running behind. The UI/UX team is blocked because the backend APIs are not ready. Specifically, the authentication endpoint is down, and the user profile service is returning 500 errors. On the frontend side, the component library needs to be updated to version 3.1, which is a breaking change.
 
-2.  Click the **"Enhance with AI"** button (or press `Ctrl+E`).
+2.  Click the **"Enhance with AI"** button or press `Ctrl+E`.
 
-3.  The application will process the text and replace it with a structured Markdown document. The mind map will automatically render this new structure.
+3.  The AI will process the input and replace it with a structured Markdown document, which is then rendered as a mind map.
 
     ```markdown
     # Project Phoenix Status
@@ -88,7 +91,7 @@ This is the standout feature of the application.
     #### Breaking Changes Expected
     ```
 
-## ⌨️ Keyboard Shortcuts
+## Keyboard Shortcuts
 
 | Shortcut      | Action                               |
 | ------------- | ------------------------------------ |
@@ -100,10 +103,10 @@ This is the standout feature of the application.
 | `Home`        | Fit the entire mind map in the view. |
 | `F`           | Zoom to the currently selected node. |
 
-## 🤝 Contributing
+## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/dovvnloading/Tree-Graph-MindMap/issues).
+Contributions, issues, and feature requests are welcome. Please refer to the [issues page](https://github.com/dovvnloading/Tree-Graph-MindMap/issues) for an overview of current tasks and bugs.
 
-## 📄 License
+## License
 
-This project is open-source. Please refer to the LICENSE file for more details. *(Assuming a license will be added)*.****
+This project is open-source. Please refer to the LICENSE file for more details.
