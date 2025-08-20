@@ -1,7 +1,3 @@
-Of course. Here is a more professional version of the README without emojis and with a more direct tone.
-
----
-
 # Tree-Graph-MindMap: AI-Powered Mind Map Generator
 
 This application transforms raw, unstructured text into an interactive mind map. It uses local Large Language Models (LLMs) via [Ollama](https://ollama.com/) to intelligently structure information, which is then visualized from a simple Markdown file.
