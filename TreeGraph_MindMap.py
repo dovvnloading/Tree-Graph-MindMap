@@ -1,3 +1,5 @@
+# Legacy Code - this is now outdated and here for QoL. See the main 'Main-Map' file for the source code/project file
+
 import sys
 import ollama
 import PySide6.QtCore
