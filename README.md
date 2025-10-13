@@ -16,9 +16,11 @@ An intuitive desktop application that transforms raw, unstructured text into int
 ![Untitled video - Made with Clipchamp (16)](https://github.com/user-attachments/assets/a7768c1b-62dd-4e24-8459-99bff6fb570e)
 
 
-<!-- ### Screenshots
+
 <p align="center">
-  <-- Add new screenshots here. It is recommended to include one for the dark theme and one for the light theme to showcase the new UI. -->
+  <img width="1600" height="900" alt="Screenshot 2025-10-13 103623" src="https://github.com/user-attachments/assets/94debfc5-c9d4-4843-aa65-595fae792c0b" />
+<img width="1600" height="900" alt="Screenshot 2025-10-13 103616" src="https://github.com/user-attachments/assets/13363f90-9da2-4444-ac9d-936eec4d1aed" />
+
 </p>
 
 ## Key Features
