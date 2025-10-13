@@ -1,4 +1,4 @@
-# Legacy Code - this is now outdated and here for QoL. See the main 'Main-Map' file for the source code/project file
+# Legacy Code - this is now outdated and here for QoL. See the main 'Mind-Map' file for the source code/project file
 
 import sys
 import ollama
