@@ -1,4 +1,3 @@
-<img width="883" height="412" alt="Mind MAp_Banner_001" src="https://github.com/user-attachments/assets/c30079c1-9c6f-4e6a-a2d3-05e005691062" />
 
 # AI-Powered Mind Map Generator
 
